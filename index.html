@@ -54,16 +54,17 @@
             let text14 = document.getElementById('14');
             let text15 = document.getElementById('15');
             let status = 0;
+            let str = "<h4>~~ I LOVE YOU <i class='material-icons'>favorite</i> </h4>"
             function set(e){
                 e.preventDefault();
                 show();
                 
             }
-            function show(){
+            async function show(){
                 const data = [text1,text2,text4,text5,text6,text7,text8,text9,text10,text11,text11,text12,text13,text14,text15]
                 setTimeout(()=>{
                     console.log(status)
-                    data[status].innerHTML = "<h4>~~ I LOVE YOU <i class='material-icons'>favorite</i> </h4>"
+                    data[status].innerHTML = str 
                     status++;
                     if(status<15){
                         show();
