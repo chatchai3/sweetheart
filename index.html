@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(189, 189, 238);">
+        <div class="container">
+            <div class="box m-5">   
+                
+                <form>
+                    <button type="submit" id="btn" class="bt">click me</button>
+                </form>
+                <hr>
+                <br>
+                <div id="1" class="text"></div>
+                <div id="2" class="text"></div>
+                <div id="3" class="text"></div>
+                <div id="4" class="text"></div>
+                <div id="5" class="text"></div>
+                <div id="6" class="text"></div>
+                <div id="7" class="text"></div>
+                <div id="8" class="text"></div>
+                <div id="9" class="text"></div>
+                <div id="10" class="text"></div>
+                <div id="11" class="text"></div>
+                <div id="12" class="text"></div>
+                <div id="13" class="text"></div>
+                <div id="14" class="text"></div>
+                <div id="15" class="text"></div>
+            </div>
+            
+        </div>
+        <script>
+            let btn = document.getElementById('btn');
+            let text1 = document.getElementById('1');
+            let text2 = document.getElementById('2');
+            let text3 = document.getElementById('3');
+            let text4 = document.getElementById('4');
+            let text5 = document.getElementById('5');
+            let text6 = document.getElementById('6');
+            let text7 = document.getElementById('7');
+            let text8 = document.getElementById('8');
+            let text9 = document.getElementById('9');
+            let text10 = document.getElementById('10');
+            let text11 = document.getElementById('11');
+            let text12 = document.getElementById('12');
+            let text13 = document.getElementById('13');
+            let text14 = document.getElementById('14');
+            let text15 = document.getElementById('15');
+            let status = 0;
+            function set(e){
+                e.preventDefault();
+                show();
+                
+            }
+            function show(){
+                const data = [text1,text2,text4,text5,text6,text7,text8,text9,text10,text11,text11,text12,text13,text14,text15]
+                setTimeout(()=>{
+                    console.log(status)
+                    data[status].innerHTML = "<h4>~~ I LOVE YOU <i class='material-icons'>favorite</i> </h4>"
+                    status++;
+                    if(status<15){
+                        show();
+                    }
+                },500)
+            }
+            btn.addEventListener("click",set);
+        </script>
+        
+</body>
+</html>
